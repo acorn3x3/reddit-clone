@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Supabase Web App</title>
+        <title>Reddit Clone</title>
         <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
         <!-- js -->
@@ -31,13 +31,21 @@
     <body>
         <header class="page-header">
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Insert Title Here</p>
+            <p class="title">Home Page</p>
             <nav>
                 <a href="/">Home</a>
+                <a href="/post-editor"> Create a Post</a>
                 <a id="sign-out-link" href="auth">Sign Out</a>
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <ul id="post-list"></ul>
+        </main>
+
+        <footer>
+            <p id="foot-nav"></p>
+            <p id="error-display" class="error"></p>
+        </footer>
     </body>
 </html>
