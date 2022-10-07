@@ -2,7 +2,7 @@ import '../auth/user.js';
 import { createPost } from '../fetch-utils.js';
 //import
 
-const postForm = document.getElementById('post=form');
+const postForm = document.getElementById('post-form');
 const errorDisplay = document.getElementById('error-display');
 //const imageInput = document.getElementById
 //const preview
@@ -29,3 +29,13 @@ postForm.addEventListener('submit', async (e) => {
         location.assign('/');
     }
 });
+
+function displayError() {
+    if (error) {
+        //eslint-disable-next-line no-console
+        console.log(error);
+        errorDisplay.textContent = error.message;
+    } else {
+        errorDisplay.textContent = '';
+    }
+}
