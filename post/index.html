@@ -37,25 +37,18 @@
                 <a id="sign-out-link" href="/auth">Sign Out</a>
             </nav>
         </header>
-
         <main>
-            <form id="post-form">
-                <label>
-                    <div>Title</div>
-                    <input name="name" required placeholder="What's your post about?" />
-                </label>
+            <section class="post-summary">
+                <h1 id="post-title"></h1>
+                <p id="post-content"></p>
+            </section>
 
-                <label>
-                    <div>Content</div>
-                    <input name="name" required placeholder="What's your post about?" />
-                </label>
-
-                <label>
-                    <div>Photo</div>
-                    <input name="name" required placeholder="What's your post about?" />
-                </label>
-                <button>Post!</button>
-            </form>
+            <div>
+                <form id="add-comment-form">
+                    <input name="text" placeholder=" add a comment" />
+                    <button>Comment</button>
+                </form>
+            </div>
         </main>
 
         <footer>

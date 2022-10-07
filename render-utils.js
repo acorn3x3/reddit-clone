@@ -1,8 +1,10 @@
+import { renderPost } from './render-utils.js';
+
 export function renderPost(post) {
     const li = document.createElement('li');
 
     // const a = document.createElement('a');
-    // a.href = `/pet/?id=${pet.id}`;
+    // a.href = `/post/?id=${post.id}`;
 
     const img = document.createElement('img');
     img.src = post.image_url;

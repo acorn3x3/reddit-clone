@@ -1,4 +1,5 @@
 import '../auth/user.js';
+import { createPost } from '../fetch-utils.js';
 //import
 
 const postForm = document.getElementById('post=form');
@@ -8,3 +9,23 @@ const errorDisplay = document.getElementById('error-display');
 
 /* State*/
 let error = null;
+
+postForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(postForm);
+
+    const post = {
+        title: formData.get('title'),
+        content: formData.get('content'),
+        //image_url: url,
+    };
+
+    const response = await createPost(post);
+    error = response.error;
+
+    if (error) {
+        displayError();
+    } else {
+        location.assign('/');
+    }
+});
