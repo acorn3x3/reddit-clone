@@ -31,7 +31,7 @@
     <body>
         <header class="page-header">
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Home</p>
+            <p class="title">Edit Post</p>
             <nav>
                 <a href="/">Home</a>
                 <a id="sign-out-link" href="/auth">Sign Out</a>
@@ -39,11 +39,29 @@
         </header>
 
         <main>
-            <ul id=""></ul>
+            <form id="post-form">
+                <label>
+                    <div>Title</div>
+                    <input name="name" required placeholder="What's your post about?" />
+                </label>
+
+                <label>
+                    <div>Content</div>
+                    <input name="name" required placeholder="What's your post about?" />
+                </label>
+
+                <label>
+                    <div>Photo</div>
+                    <input name="name" required placeholder="What's your post about?" />
+                </label>
+                <button>Post!</button>
+            </form>
         </main>
 
         <footer>
             <p id="foot-nav"></p>
+            <a href="/">Home</a>
+            <a id="sign-out-link" href="/auth">Sign Out</a>
             <p id="error-display" class="error"></p>
         </footer>
     </body>

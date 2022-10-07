@@ -1,6 +1,7 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
+    --background: rgb(53, 132, 236);
+    --header-background: rgb(39, 212, 62);
+    --footer-background: rgb(64, 61, 97);
     --text-color: rgb(7, 5, 68);
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
@@ -18,6 +19,15 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
+}
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--footer-background);
+    color: white;
+    text-align: center;
 }
 
 .page-header {
