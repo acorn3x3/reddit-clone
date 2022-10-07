@@ -1,5 +1,3 @@
-import { renderPost } from './render-utils.js';
-
 export function renderPost(post) {
     const li = document.createElement('li');
 
