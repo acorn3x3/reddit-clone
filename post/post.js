@@ -30,12 +30,12 @@ window.addEventListener('load', async () => {
     error = response.error;
     post = response.data;
 
-    // if (error) {
-    //     location.replace('/');
-    // } else {
-    //     displayPost();
-    //     displayComments();
-    // }
+    if (error) {
+        location.replace('/');
+    } else {
+        displayPost();
+        displayComments();
+    }
     displayPost();
     displayComments();
 });
