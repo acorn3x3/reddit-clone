@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="post-editor.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,19 +31,46 @@
     <body>
         <header class="page-header">
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Home Page</p>
+            <p class="title">Edit Post</p>
             <nav>
                 <a href="/">Home</a>
-                <a href="/post-editor"> Create a Post</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
             </nav>
         </header>
 
         <main>
-            <ul id="post-list"></ul>
+            <form id="post-form">
+                <label>
+                    <div>Title</div>
+                    <input name="title" required placeholder="Give it an interesting title" />
+                </label>
+
+                <label>
+                    <div>Content</div>
+                    <textarea
+                        name="content"
+                        required
+                        placeholder="What's your post about?"
+                    ></textarea>
+                </label>
+
+                <!-- <label>
+                    <div>Photo</div>
+                    <input
+                        name="image-input"
+                        type="file"
+                        required
+                        placeholder="upload image(optional)"
+                    />
+                </label> -->
+                <button>Post!</button>
+            </form>
         </main>
 
         <footer>
+            <p id="foot-nav"></p>
+            <a href="/">Home</a>
+            <a id="sign-out-link" href="/auth">Sign Out</a>
             <p id="error-display" class="error"></p>
         </footer>
     </body>

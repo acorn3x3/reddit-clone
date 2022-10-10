@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="post.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,19 +31,32 @@
     <body>
         <header class="page-header">
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Home Page</p>
+            <p class="title">Edit Post</p>
             <nav>
                 <a href="/">Home</a>
-                <a href="/post-editor"> Create a Post</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
             </nav>
         </header>
-
         <main>
-            <ul id="post-list"></ul>
+            <section class="post-summary">
+                <h2 id="post-title"></h2>
+                <p id="post-content"></p>
+            </section>
+
+            <div>
+                <form id="add-comment-form">
+                    <input name="text" placeholder=" add a comment" />
+                    <button>Comment</button>
+                </form>
+            </div>
+
+            <ul id="comment-list"></ul>
         </main>
 
         <footer>
+            <p id="foot-nav"></p>
+            <a href="/">Home</a>
+            <a id="sign-out-link" href="/auth">Sign Out</a>
             <p id="error-display" class="error"></p>
         </footer>
     </body>
