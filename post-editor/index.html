@@ -42,12 +42,16 @@
             <form id="post-form">
                 <label>
                     <div>Title</div>
-                    <input name="title" required placeholder="What's your post about?" />
+                    <input name="title" required placeholder="Give it an interesting title" />
                 </label>
 
                 <label>
                     <div>Content</div>
-                    <input name="content" required placeholder="What's your post about?" />
+                    <textarea
+                        name="content"
+                        required
+                        placeholder="What's your post about?"
+                    ></textarea>
                 </label>
 
                 <label>
@@ -56,7 +60,7 @@
                         name="image-input"
                         type="file"
                         required
-                        placeholder="What's your post about?"
+                        placeholder="upload image(optional)"
                     />
                 </label>
                 <button>Post!</button>
