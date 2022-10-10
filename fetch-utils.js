@@ -41,7 +41,7 @@ export async function getPost(id) {
         .from('posts')
         .select(`*,comments (*)`)
         .eq('id', id)
-        .order('create_at', { foreignTable: 'comments', ascending: false })
+        .order('created_at', { foreignTable: 'comments', ascending: false })
         .single();
 }
 

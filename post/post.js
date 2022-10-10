@@ -30,11 +30,14 @@ window.addEventListener('load', async () => {
     error = response.error;
     post = response.data;
 
-    if (error) {
-        location.replace('/');
-    } else {
-        displayPost();
-    }
+    // if (error) {
+    //     location.replace('/');
+    // } else {
+    //     displayPost();
+    //     displayComments();
+    // }
+    displayPost();
+    displayComments();
 });
 
 addCommentForm.addEventListener('submit', async (e) => {
